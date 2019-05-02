@@ -23,16 +23,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.mViewHolder.buttonCalculate.setOnClickListener(this);
 
+        this.clearValues();
     }
 
     @Override
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.button_calculate) {
-            this.mViewHolder.buttonCalculate.setText("Teste");
+            Double value = Double.valueOf(this.mViewHolder.editValue.getText().toString());
+            this.mViewHolder.textDollar.setText(String.format("%.2f" , value * 3));
+            this.mViewHolder.textEuro.setText(String.format("%.2f" , value * 4));
         }
     }
 
+//Método de tratamento
+    private void clearValues(){
+        this.mViewHolder.textDollar.setText(" ");
+        this.mViewHolder.textEuro.setText(" ");
+    }
 
     private static class ViewHolder {
         EditText editValue;
