@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,11 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
-        int id = view.getId();
-        if (id == R.id.button_calculate) {
-            Double value = Double.valueOf(this.mViewHolder.editValue.getText().toString());
-            this.mViewHolder.textDollar.setText(String.format("%.2f" , value * 3));
+    public void onClick(View v) {
+        if (v.getId() == R.id.button_calculate) {
+            String value = this.mViewHolder.editValue.getText().toString();
+            if ("",equals(value)) {
+                Toast.makeText( this, this.getString(R.string.informe_valor), Toast.LENGTH_LONG).show();
+            }else {
+
+            }mViewHolder.textDollar.setText(String.format("%.2f" , value * 3));
             this.mViewHolder.textEuro.setText(String.format("%.2f" , value * 4));
         }
     }
