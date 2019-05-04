@@ -6,4 +6,5 @@
     <string name="calcular">Calcular:</string>
     <string name="valor">valor</string>
     <string name="informe_valor">Informe um valor:</string>
+    <string name="qual_o_valor_em_real">qual_o_valor_em_real</string>
 </resources>

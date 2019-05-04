@@ -11,46 +11,57 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/valor_em_real" />
+        android:gravity="center"
+        android:text="Qual o valor em real"
+        android:textSize="25sp" />
 
     <EditText
-         android:id="@+id/edit_value"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:hint="@string/valor"
-        />
+        android:id="@+id/edit_value"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:inputType="numberSigned"
+        android:text=" " />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/valor_em_dollar"
-        />
+        android:layout_marginTop="50dp"
+        android:hint="@string/valor_em_dollar" />
 
     <TextView
         android:id="@+id/text_dollar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="@string/valor_em_dollar"
-        />
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/valor_em_euro"
-        />
+        android:layout_marginTop="50dp"
+        android:hint="@string/valor_em_euro" />
 
     <TextView
         android:id="@+id/text_euro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="@string/valor_em_euro"
-        />
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/button_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorAccent"
         android:text="@string/calcular"
-        android:background="@color/colorAccent" />
+        android:textColor="@color/Light" />
 
-    </LinearLayout>
+</LinearLayout>
