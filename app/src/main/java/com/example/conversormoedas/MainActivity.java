@@ -31,12 +31,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.button_calculate) {
             String value = this.mViewHolder.editValue.getText().toString();
-            if ("",equals(value)) {
+            if ("".equals(value)) {
+                // Exibe mensagem ao usuário
                 Toast.makeText( this, this.getString(R.string.informe_valor), Toast.LENGTH_LONG).show();
-            }else {
+            }else{
+                //Convertendo real para dolar e euro
+                Double real = Double.valueOf(value);
 
-            }mViewHolder.textDollar.setText(String.format("%.2f" , value * 3));
-            this.mViewHolder.textEuro.setText(String.format("%.2f" , value * 4));
+            this.mViewHolder.textDollar.setText(String.format("%.2f", (real /  4)));
+            this.mViewHolder.textEuro.setText(String.format("%.2f", (real / 5)));
+            }
         }
     }
 
